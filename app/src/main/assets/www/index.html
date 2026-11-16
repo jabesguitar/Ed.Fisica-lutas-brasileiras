@@ -58,5 +58,6 @@
 <div class="modal-backdrop" id="instrumentModal" role="dialog" aria-modal="true" aria-labelledby="instrumentModalTitle"><div class="modal instrument-modal"><button class="modal-x" id="closeInstrument" aria-label="Fechar">×</button><img id="instrumentModalImage" src="" alt=""><h3 id="instrumentModalTitle"></h3><p id="instrumentModalDescription"></p><button class="primary-btn" id="returnStudy">VOLTAR AOS ESTUDOS</button></div></div>
 <div class="toast" id="toast" role="status"></div>
 <div class="modal-backdrop" id="hintModal"><div class="modal"><button class="modal-x" id="closeHint">×</button><span class="eyebrow">UMA AJUDINHA</span><h3>💡 Dica para pensar</h3><p id="hintText"></p><button class="primary-btn" id="gotIt">ENTENDI!</button></div></div>
+<script>document.addEventListener("DOMContentLoaded",()=>{const modal=document.getElementById("instrumentModal");const close=()=>modal&&modal.classList.remove("show");document.getElementById("closeInstrument")?.addEventListener("click",close);document.getElementById("returnStudy")?.addEventListener("click",close);modal?.addEventListener("click",e=>{if(e.target===modal)close()})});</script>
 <script src="app.js"></script>
 </body></html>
