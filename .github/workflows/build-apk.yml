@@ -4,7 +4,7 @@ name: Gerar APK Android
 on:
   workflow_dispatch:
   push:
-    branches: ["main"]
+    branches: ["main", "fix/quiz-sequencial-e-estabilidade"]
 
 jobs:
   build-apk:
