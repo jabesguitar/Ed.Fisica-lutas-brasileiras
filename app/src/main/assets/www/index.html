@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071d55"><meta name="description" content="Quiz educativo de Educação Física para o 6º ano: Lutas Brasileiras.">
+<title>Lutas Brasileiras — Quiz & Aprendizado</title>
+<link rel="icon" type="image/png" href="assets/app-icon.png"><link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Russo+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ambient"></div>
+<header class="topbar"><a class="brand" href="#" id="brandHome"><img src="assets/app-icon.png" alt=""><span>LUTAS <b>BRASILEIRAS</b><small>QUIZ & APRENDIZADO</small></span></a>
+<div class="top-actions"><button class="icon-btn" id="soundToggle" aria-label="Ativar ou desativar som">♫</button><button class="icon-btn" id="helpBtn" aria-label="Ajuda">?</button></div></header>
+<main id="app">
+<section class="screen active" id="homeScreen">
+<div class="hero">
+<div class="hero-copy"><span class="eyebrow">EDUCAÇÃO FÍSICA • 6º ANO</span><h1>Aprender também<br>é uma <em>luta!</em></h1><p>Entre no jogo, descubra a história das lutas brasileiras e prepare-se para mandar bem na prova.</p>
+<div class="hero-tags"><span>🥋 Capoeira</span><span>🪶 Huka-huka</span><span>🇧🇷 Cultura brasileira</span></div></div>
+<div class="hero-art"><img src="assets/app-icon.png" alt="Logo Lutas Brasileiras"></div></div>
+<div class="section-heading"><div><span class="eyebrow">ESCOLHA SUA JORNADA</span><h2>Selecione o nível</h2></div><span class="tiny-note">Cada nível tem seu próprio desafio</span></div>
+<div class="levels">
+<button class="level-card easy" data-level="facil"><span class="level-icon">🌱</span><span class="level-name">FÁCIL</span><strong>1:30</strong><small>3 vidas · Para começar</small><i>JOGAR AGORA →</i></button>
+<button class="level-card normal" data-level="normal"><span class="level-icon">🔥</span><span class="level-name">NORMAL</span><strong>1:00</strong><small>4 vidas · Hora de avançar</small><i>JOGAR AGORA →</i></button>
+<button class="level-card hard" data-level="dificil"><span class="level-icon">🏆</span><span class="level-name">DIFÍCIL</span><strong>0:30</strong><small>5 vidas · Desafio máximo</small><i>JOGAR AGORA →</i></button>
+</div>
+<div class="section-heading games-heading"><div><span class="eyebrow">APRENDA BRINCANDO</span><h2>Outros modos de jogo</h2></div><span class="tiny-note">O quiz é o desafio principal!</span></div>
+<div class="game-grid">
+<button class="game-card" data-mode="quiz"><span>🎯</span><b>Quiz relâmpago</b><small>Perguntas de múltipla escolha</small></button>
+<button class="game-card" data-mode="match"><span>🧩</span><b>Associe pergunta e resposta</b><small>Encontre os pares corretos</small></button>
+<button class="game-card" data-mode="columns"><span>🔗</span><b>Ligue as colunas</b><small>Relacione conceitos</small></button>
+<button class="game-card" data-mode="memory"><span>🃏</span><b>Jogo da memória</b><small>Memorize e combine</small></button>
+<button class="game-card" data-mode="truefalse"><span>⚡</span><b>Verdadeiro ou falso</b><small>Decida antes do tempo acabar</small></button>
+<button class="game-card" data-mode="wordsearch"><span>🔎</span><b>Caça-palavras</b><small>Encontre termos da matéria</small></button>
+<button class="game-card" data-mode="crossword"><span>✏️</span><b>Palavras cruzadas</b><small>Complete com as dicas</small></button>
+<button class="game-card" data-mode="study"><span>📚</span><b>Central de estudos</b><small>Resumo para revisar a prova</small></button>
+</div>
+<footer>Feito para aprender, respeitar e valorizar a cultura brasileira. <span>•</span> Funciona offline após o primeiro carregamento.</footer>
+</section>
+
+<section class="screen" id="gameScreen">
+<div class="game-top"><button class="back-btn" id="backHome">← Início</button><div class="mode-title"><span id="modeEmoji">🎯</span><div><small id="levelLabel">NÍVEL FÁCIL</small><b id="modeLabel">QUIZ PRINCIPAL</b></div></div><div class="game-stats"><span class="stat">⏱ <b id="timer">1:30</b></span><span class="stat lives" id="lives">❤️❤️❤️</span></div></div>
+<div class="progress-wrap"><div class="progress-meta"><span id="questionCount">QUESTÃO 1</span><span id="scoreText">0 pontos</span></div><div class="progress"><i id="progressBar"></i></div></div>
+<div id="gameContent" class="game-content"></div>
+<div class="game-bottom"><button class="soft-btn" id="hintBtn">💡 Dica</button><button class="soft-btn" id="skipBtn">Pular pergunta ↷</button><button class="soft-btn" id="restartBtn">↻ Reiniciar</button></div>
+</section>
+
+<section class="screen" id="studyScreen">
+<div class="study-top"><button class="back-btn" id="studyBack">← Início</button><span class="eyebrow">GUIA DE REVISÃO • 6º ANO</span></div>
+<h1 class="study-title">Seu resumo de <em>estudos</em></h1><p class="study-intro">Leia com atenção. Depois, volte aos jogos e teste o que aprendeu!</p>
+<div class="study-layout">
+<nav class="study-nav"><button class="active" data-study="conceito">🥋 O que são lutas?</button><button data-study="capoeira">🎶 Capoeira</button><button data-study="instrumentos">🥁 Instrumentos</button><button data-study="ginga">👣 Ginga e vestimentas</button><button data-study="hukahuka">🪶 Huka-huka</button><button data-study="respeito">🤝 Respeito e segurança</button></nav>
+<article class="study-article" id="studyArticle"></article></div>
+</section>
+<section class="screen" id="resultScreen"><div class="result-card"><div class="result-medal" id="resultMedal">🏆</div><span class="eyebrow">FIM DE JOGO</span><h1 id="resultTitle">Mandou bem!</h1><p id="resultMessage"></p><div class="result-numbers"><div><b id="resultScore">0</b><small>PONTOS</small></div><div><b id="resultCorrect">0</b><small>ACERTOS</small></div><div><b id="resultAccuracy">0%</b><small>APROVEITAMENTO</small></div></div><button class="primary-btn" id="playAgain">JOGAR NOVAMENTE ↗</button><button class="secondary-btn" id="resultHome">VOLTAR AO INÍCIO</button></div></section>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal-backdrop" id="hintModal"><div class="modal"><button class="modal-x" id="closeHint">×</button><span class="eyebrow">UMA AJUDINHA</span><h3>💡 Dica para pensar</h3><p id="hintText"></p><button class="primary-btn" id="gotIt">ENTENDI!</button></div></div>
+<script src="app.js"></script>
+</body></html>

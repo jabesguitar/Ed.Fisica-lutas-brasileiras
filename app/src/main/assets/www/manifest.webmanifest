@@ -1,0 +1,16 @@
+{
+  "name": "Lutas Brasileiras — Quiz & Aprendizado",
+  "short_name": "Lutas Brasileiras",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f7ff",
+  "theme_color": "#071b50",
+  "icons": [
+    {
+      "src": "assets/app-icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
